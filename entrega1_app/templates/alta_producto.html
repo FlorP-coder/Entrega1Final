@@ -1,0 +1,25 @@
+{% extends "inicio.html" %} 
+
+
+{% load static %}  
+
+{% block contenido %} 
+
+<h2>Alta de productos</h2>
+
+<form action="alta_producto" method="POST"> 
+    {% csrf_token %} 
+    <p>Nombre: </p>
+    <input type="text" name = "tipo_prod" required>
+    <p>Comercio: </p>
+    <input type="number" name = "num_comercio" required>
+
+    <input type="submit" value="Enviar">
+
+</form> 
+
+
+
+
+{% endblock %}  
+

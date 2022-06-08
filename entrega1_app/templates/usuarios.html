@@ -1,0 +1,38 @@
+{% extends "inicio.html" %} 
+
+
+{% load static %}  
+
+{% block contenido %} 
+
+<h2>Listado de usuarios</h2>
+
+<table class="table">
+      <thead>
+        <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Nacimiento</th>
+        <th scope="col">Num_cuenta</th>
+        <th scope="col">Fecha_Alta</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {%for n in usuarios%}
+      <tr>
+        <th scope="row">{{n.id}}</th>
+        <td>{{n.nombre}}</td>
+        <td>{{n.apellido}}</td>
+        <td>{{n.nacimiento}}</td>
+        <td>{{n.num_cuenta}}</td>
+        <td>{{n.fecha_alta}}</td>
+
+      </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
+

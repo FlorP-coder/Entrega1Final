@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Estamos buscando el: {{tipo_prod}}</p>
+
+    {% if productos%}  
+
+    <ul>
+    {% for productos in productos %} 
+        <li>Tipo Producto : {{productos.tipo_prod}}</li>
+        <li>Comercio: {{productos.num_comercio}}</li>
+
+    {% endfor %} 
+
+    </ul>
+    {% else %} 
+        <p>No se encontraron productos</p>
+    
+    {% endif %}  
+
+</body>
+</html>

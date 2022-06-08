@@ -1,0 +1,31 @@
+{% extends "inicio.html" %} 
+
+
+{% load static %}  
+
+{% block contenido %} 
+
+<h1>Alta de usuarios Wilóu</h1>
+
+<form action="alta_usuario" method="POST"> 
+    {% csrf_token %} 
+    <p>Nombre: </p>
+    <input type="text" name = "nombre" required>
+    <p>Apellido: </p>
+    <input type="text" name = "apellido" required>
+    <p>Nacimiento: </p>
+    <input type="datetime" name = "nacimiento" required>
+    <p>Num_cuenta: </p>
+    <input type="number" name = "num_cuenta" required>
+    <p>Fecha_Alta: </p>
+    <input type="datetime" name = "fecha_alta" required>
+
+    <input type="submit" value="Enviar">
+
+</form> 
+
+
+
+
+{% endblock %}  
+
